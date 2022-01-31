@@ -31,6 +31,16 @@ pipeline {
         """
       }
     }
+    stage('merge') {
+      when {
+        branch 'main'
+      }
+      steps {
+        sh """
+          echo this is the main branch
+        """
+      }
+    }
   }
   post {
     always {

@@ -33,10 +33,8 @@ pipeline {
     }
     stage('who-am-i') {
       steps {
-        sh """
-          echo "this is in tom branch"
-          echo "I am branch env.GIT_BRANCH"
-        """
+        echo 'tom branch'
+        echo 'branch ...' + env.BRANCH_NAME
       }
     }
   }

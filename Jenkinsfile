@@ -33,10 +33,7 @@ pipeline {
     }
     stage('who-am-i') {
       steps {
-        sh """
-          echo "I am on main branch"
-          echo "I am branch env env.GIT_BRANCH"
-        """
+        echo 'branch ..' + env.BRANCH_NAME
       }
     }
     stage('merge') {

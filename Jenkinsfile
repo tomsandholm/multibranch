@@ -31,6 +31,13 @@ pipeline {
         """
       }
     }
+    stage('who-am-i') {
+      steps {
+        sh """
+          echo "I am branch env.GIT_BRANCH"
+        """
+      }
+    }
   }
   post {
     always {
